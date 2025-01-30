@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Update Project Progress</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Update Project Progress</h1>
+        <form action="/update-progress" method="POST">
+            <div class="mb-3">
+                <label for="totalWork" class="form-label">Total Work</label>
+                <input type="number" class="form-control" id="totalWork" name="totalWork" value="<%= project ? project.totalWork : '' %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="workDone" class="form-label">Work Done</label>
+                <input type="number" class="form-control" id="workDone" name="workDone" value="<%= project ? project.workDone : '' %>" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Update Progress</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

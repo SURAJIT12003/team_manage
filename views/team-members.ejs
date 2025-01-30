@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members</title>
+    <link rel="stylesheet" href="/path/to/your/css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Team Leader: <%= teamData.teamLeaderName %></h2>
+        <h3>Team Members:</h3>
+        <ul class="list-group">
+            <% teamData.teamMembers.forEach(member => { %>
+                <li class="list-group-item">
+                    <strong>Name:</strong> <%= member.name %> - <strong>Position:</strong> <%= member.position %>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>
